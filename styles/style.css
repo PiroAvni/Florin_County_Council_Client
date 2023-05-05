@@ -1,0 +1,9 @@
+@import url("base.css");
+@import url("layout.css");
+
+.title-container h1{
+    font-weight: 900;
+    font-size: 3rem;
+    color: #002626;
+}
+
