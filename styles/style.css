@@ -13,4 +13,22 @@
     color:#002626;
 }
 
+.password_fieldset{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.fieldbox_username {
+    background-color: aliceblue;
+    
+}
+.fieldbox_password {
+    background-color: aliceblue;
+    margin-left: 8px;
+}
+
+.login_button {
+    background-color: grey;
+    padding: 5px;
+}
 
