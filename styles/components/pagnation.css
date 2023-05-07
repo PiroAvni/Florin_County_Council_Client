@@ -1,16 +1,21 @@
-.pag-container{
-    display:flex;
-    flex-direction: row;
- margin-top: 1rem;
+/* .pag-container {
+ 
+  margin-top: 1rem;
+  width: 50%;
+  border: 1px solid black;
 }
-.pag-tabs{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around ;
-    align-items: center;
-    margin: auto;
-    gap: 4rem;;
-}
-.first{
+.pag-tabs {
 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid black;
+  margin: auto;
+  gap: 7rem;
 }
+.first:hover,
+.previous:hover,
+.next:hover,
+.last:hover {
+  cursor: pointer;
+  background: #e55812;
+} */

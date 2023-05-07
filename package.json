@@ -1,0 +1,17 @@
+{
+  "name": "florin_county_council_client-dev-avni",
+  "version": "1.0.0",
+  "description": "The aim of this project is to create a community website with the aim of allowing members & businesses in Florin County to:",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
