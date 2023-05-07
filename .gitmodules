@@ -1,0 +1,3 @@
+[submodule "florin_server"]
+	path = florin_server
+	url = https://github.com/yrossan/florin_server
