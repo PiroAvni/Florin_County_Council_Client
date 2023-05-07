@@ -1,4 +1,4 @@
-let baseUrl = "https://florin-server-web.onrender.com/posts";
+let baseUrl2 = "https://florin-server-web.onrender.com/posts";
 
 document
   .querySelector("#nextButton")
@@ -9,7 +9,7 @@ document
 
 //Fetch Data from API
 async function fetchEntries() {
-  const response = await fetch(baseUrl);
+  const response = await fetch(baseUrl2);
   const entries = await response.json();
   console.log(entries);
   //return entries

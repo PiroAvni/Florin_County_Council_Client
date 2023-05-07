@@ -1,12 +1,13 @@
-var baseUrl = "https://florin-server-web.onrender.com/posts";
+const baseUrl = "https://florin-server-web.onrender.com/posts";
 
-var coinData = [];
+let coinData = [];
 // var current_page = 1
 // var records_per_page = 10;
-var apiUrl = `${baseUrl}`;
+const apiUrl = `${baseUrl}`;
 
-const pageSize = 10;
+const pageSize = 5;
 let curPage = 1;
+
 
 async function renderTable(page = 1) {
   await getData();
@@ -22,46 +23,58 @@ async function renderTable(page = 1) {
   } else {
     nextButton.style.visibility = "visible";
   }
+coinData.forEach((post)=>{
+  //console.log('line 59',post)
+    console.log(post)
 
-  //   const container = document.getElementById("post-container");
+    const container = document.getElementById("post-container");
 
-  //   const entryCard = document.createElement("div");
-  //   entryCard.className = "card w-100 mb-3 bg-green-500";
+    const entryCard = document.createElement("div");
+    entryCard.className = "card", "w-100", "mt-1" , "bg-green-500";
 
-  //   const body = document.createElement("div");
-  //   body.classList.add("card-body", "mb-2");
+    const body = document.createElement("div");
+    body.classList.add("card-body", "mb-1",  "mt-2", "p-1");
 
-  //   const title = document.createElement("h4");
-  //   title.classList.add("card-title");
-  //   title.textContent = title;
+    const title = document.createElement("h4");
+    title.classList.add("card-title");
+    title.textContent = post.title;
 
-  //   const category = document.createElement("h4");
-  //   category.classList.add("card-subtitle", "mb-2");
-  //   category.textContent = cryptoCoin.category;
+    const category = document.createElement("h4");
+    category.classList.add("card-subtitle", "mb-1");
+    category.textContent = post.category;
 
-  //   const content = document.createElement("p");
-  //   content.classList.add("card-text");
-  //   content.textContent = cryptoCoin.content;
+    const content = document.createElement("p");
+    content.classList.add("card-text");
+    content.textContent = post.content;
 
-  //   const date = document.createElement("p");
-  //   date.classList.add("card-text");
-  //   date.textContent = cryptoCoin.date;
-
+    const date = document.createElement("p");
+    date.classList.add("card-text");
+    date.textContent = post.date;
+    //console.log('line 49',post)
+ 
+})
   // create html
-  var cryptoCoin = "";
-  coinData
-    .filter((row, index) => {
+var cryptoCoin = "";
+coinData.filter((row, index) => {
       let start = (curPage - 1) * pageSize;
+      //console.log(start)
       let end = curPage * pageSize;
+     // console.log(end)
       if (index >= start && index < end) return true;
     })
+  
     // const elements = [title, category, content, date];
     // elements.forEach((element) => {
     //   entryCard.appendChild(element);
     //   body.appendChild(entryCard);
     //   container.appendChild(body);
-    //   console.log(entryCard);
+    //   console.log('line 70',body);
     // })
+
+  
+  
+
+  
     .forEach((coin) => {
       cryptoCoin += `<h4>  ${coin.title}</h4>`;
       cryptoCoin += `<h4> ${coin.category} </h4>`;

@@ -1,54 +1,49 @@
-.nav {
-  background-color: #efe7da !important;
+/* Navigation */
+
+
+
+
+
+/* Entries Section layout    */
+#public-enteries{
+  background-color:#0E4749 ;
+}
+.container{
+display:flex;
+border: 1px sold blue;
+position: relative;
+background-color: #fff;
 }
 
-.btn-nav {
-  border: 1px solid rgb(229, 88, 18);
-  border-radius: 10px;
-  width:170px;
-  box-shadow: 0px 8px 15px rgba(229, 88,18, 0.1);
-   transition: all 0.3s ease 0s; 
-}
-.btn-nav:hover {
-  color: #efe7da;
-  background-color: #e55812;
-  border: 1px solid rgb(120, 120, 120);
-  /* border-radius: 20px;
-  border: 1px solid rgb(100, 99, 99); */
-}
-  .nav-link {
-    color: #ededec;
-  }
 
-.title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-}
 .main-container {
-  margin: 0.625rem;
-  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  border: 1px solid red;
+ 
  
 }
 .main-section {
-  margin-top: 3rem ;
+  position: relative;
+  margin: auto ;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  align-items: center;
 }
-  .flex-row {
-    flex-wrap: nowrap;
-    gap: 2rem;
-  }
   .col {
-    background-color: #f6d1bf;
+    background-color: #f5ac72;
     border-radius: 10px;
-    height: 100vh;
+    width:800px;
   }
 
-.left-col{
-    flex:0%
-  }
-  .right-col{
-    flex: 50%;
-    overflow-y:scroll;
+  .post-container{
+    position: relative;
+    width:100%;
+
+    
   }
   
+
+  /* HERO Section */
