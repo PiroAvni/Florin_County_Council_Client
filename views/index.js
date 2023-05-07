@@ -37,7 +37,6 @@ function createPost(data) {
   date.textContent = data.date;
   
 
-
   const elements = [title, category, content, date];
   elements.forEach((element) => {
     post.appendChild(element);
