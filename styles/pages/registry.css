@@ -1,13 +1,13 @@
 @import url("../style.css");
 
 body {
-  height: 100vh;
+ 
 }
 section{
 display: grid;
   align-items: center;
   justify-content: center;
-  height: 80vh; 
+ 
 }
 .register-title{
 font-size: 3rem;
