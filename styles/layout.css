@@ -15,11 +15,11 @@
   border: 1px solid rgb(120, 120, 120);
   /* border-radius: 20px;
   border: 1px solid rgb(100, 99, 99); */
-
+}
   .nav-link {
     color: #ededec;
   }
-}
+
 .title-container {
   display: flex;
   align-items: center;
@@ -32,27 +32,23 @@
  
 }
 .main-section {
-
   margin-top: 3rem ;
+}
   .flex-row {
- 
+    flex-wrap: nowrap;
     gap: 2rem;
   }
-
   .col {
     background-color: #f6d1bf;
     border-radius: 10px;
     height: 100vh;
   }
-}
+
 .left-col{
     flex:0%
   }
   .right-col{
     flex: 50%;
     overflow-y:scroll;
-  }
-  .footer{
-    padding: 3rem;
   }
   

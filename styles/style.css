@@ -1,5 +1,6 @@
 @import url("base.css");
 @import url("layout.css");
+@import url('./components/pagnation.css');
 
 .title-container h1{
     font-weight: 900;
@@ -34,5 +35,13 @@
 }
 .service-text{
     font-size: 2rem;
+    margin: auto;
+}
+
+.hero-title{
+    display:flex;
+    width: 50%;
+    font-size: 4rem;
+    font-weight: 800;
     margin: auto;
 }
