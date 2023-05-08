@@ -1,24 +1,36 @@
 @import url("../style.css");
 
-body {
- 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ruda", sans-serif;
 }
-section{
-display: grid;
+html {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}
+section {
+  display: grid;
   align-items: center;
   justify-content: center;
- 
+  margin: 6rem;
 }
-.register-title{
-font-size: 3rem;
-margin-top: 2rem;
-}
-.register-content{
-    font-size: 1rem;
-    color:#e2711d;
-    margin-bottom: 1rem;
+.reg-logo {
+  object-fit: cover;
 }
 
+.register-title {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color:#002626 ;
+}
+.register-content {
+  font-size: 1rem;
+  color: #e2711d;
+  margin-bottom: 1rem;
+}
 
 .form-control {
   display: block;
@@ -132,32 +144,28 @@ span {
   color: #e2711d;
 }
 
- /* blur effect  */
-.blur-effect{
-
- width: 35rem;
- height: 45rem;
- box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
- border-radius: 5px;
- position: relative;
- z-index: 1;
- background: inherit;
- overflow: hidden;
-
+/* blur effect  */
+.blur-effect {
+  width: 35rem;
+  height: 45rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
 }
 
-.blur-effect::before{
-    
-        content: "";
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-        filter: blur(10px);
-        margin: -20px;
-       
+.blur-effect::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
 }

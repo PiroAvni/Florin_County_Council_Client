@@ -1,0 +1,42 @@
+@import url('./registry.css');
+
+.user-message{
+    margin-left: 1rem;
+}
+section > .form-control{
+    width:50%
+}
+
+section > .container{
+display: flex;
+flex-direction: column;
+/* flex-wrap:wrap; */
+width:100%;
+background-color:#002626;
+}
+section > .update-desc{
+    font-size: 4rem;
+}
+.update{
+    margin: 2rem 0;
+    font-size: 2rem;
+    color:#002626 ;
+}
+.post{
+min-width: 555px ;
+
+border: 1px solid #e2711d;
+border-radius: 5px;
+}
+.post:nth-child(even){
+    background-color: #efe7da;
+    
+}
+.post:nth-child(odd){
+    background-color: #fff;
+    
+}
+.date-format{
+    font-size:0.7rem;
+    color:rgb(138, 137, 137)
+}

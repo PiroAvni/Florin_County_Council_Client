@@ -1,0 +1,149 @@
+@import url("base.css");
+@import url("layout.css");
+@import url("./components/pagnation.css");
+@import url("./components/buttons.css");
+@import url("./components//cards.css");
+
+/* Navigation */
+.nav {
+  background-color: #efe7da !important;
+  height: 3rem;
+}
+
+.nav-home {
+  color: hsl(26, 77%, 50%);
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item {
+  margin: auto;
+}
+
+.nav-home :hover {
+  bottom: 0;
+  height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 2rem;
+  width: 100%;
+}
+
+.logo-container > img {
+  margin-left: 1rem;
+  justify-items: end;
+  align-content: flex-end;
+}
+
+.logo-container p {
+}
+.logo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+.navbar-brand > img {
+  display: flex;
+  object-fit: contain;
+  align-items: center;
+  margin-top: 1rem;
+  height: 80px;
+  width: 80px;
+}
+.navbar-brand >p {
+  color: #002626;
+}
+
+/* Enteries Section */
+.title-container h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #002626;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.service_desc {
+  font-size: 2rem;
+  margin: 1rem;
+  font-weight: bold;
+  color: #002626;
+}
+
+/* Left - Side Section */
+.left-col .service-text {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.service-text {
+  font-size: 2rem;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  height: 50rem;
+}
+
+.hero-title {
+  display: flex;
+  width: 50%;
+  font-size: 4rem;
+  font-weight: 800;
+  margin: auto;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+}
+
+.content-title {
+  margin: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e2711d;
+}
+
+img {
+  height: 200px;
+  width: 400px;
+  object-fit: contain;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.footer-title {
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer-img {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
