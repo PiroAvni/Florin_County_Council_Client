@@ -12,6 +12,9 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       body: JSON.stringify({
         username: form.get("username"),
         password: form.get("password"),
+        admin: form.get("is_admin"),
+        business: form.get("is_business")
+
       }),
     };
   
