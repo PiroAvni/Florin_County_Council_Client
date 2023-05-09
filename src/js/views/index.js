@@ -96,36 +96,73 @@ async function loadPosts(category) {
 
 document.getElementById("jobs-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  
-  console.log(loadPosts("Jobs"));
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+    loadPosts("Jobs")
 });
+
+
+
 document.getElementById("voluntary-btn").addEventListener("click", (e) => {
     e.preventDefault();
+    const element = document.querySelectorAll(".post")
+    element.forEach(post =>{
+      console.log('1')
+      post.remove();
+    })
     loadPosts("voluntary");
 });
 
 document.getElementById("events-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
   loadPosts("events");
 });
 
 document.getElementById("announcements-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
   loadPosts("announcements");
 });
 
 document.getElementById("announcements-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
   loadPosts("announcements");
 });
 
 document.getElementById("clubs-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
   loadPosts("clubs");
 });
 
 document.getElementById("services-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
   loadPosts("services");
 });
 
