@@ -1,36 +1,21 @@
  function createPostElement(data) {
   console.log(data);
- 
   const post = document.createElement("div");
-  // post.onclick()
   post.className = "post";
-
-  const title = document.createElement("h2");
-  title.classList.add("card-title");
-  title.textContent = "Title:";
-  post.appendChild(title);
+  post.id = "card"
 
   const header = document.createElement("h2");
   header.textContent = "Title:";
-  header.classList.add("m-2");
-  header.textContent = data["post_title"];
+  header.classList.add("m-2","card-title");
+  header.textContent = data["title"];
   post.appendChild(header);
 
-  const categoryTitle = document.createElement("h2");
-  categoryTitle.classList.add("card-subtitle");
-  categoryTitle.textContent = "Category:";
-  post.appendChild(categoryTitle);
-
   const category = document.createElement("p");
-  category.classList.add("m-2");
+  category.classList.add("m-2","card-subtitle");
   category.textContent = data["category"];
   post.appendChild(category);
 
-  const contentTitle = document.createElement("h2");
-  contentTitle.classList.add("card-subtitle");
-  contentTitle.textContent = "Content:";
-  post.appendChild(contentTitle);
-
+ 
   const content = document.createElement("p");
   content.classList.add("m-2", "card-text");
   content.textContent = data["content"];
@@ -91,7 +76,7 @@ async function loadPosts() {
   if (response.status == 200) {
     const posts = await response.json();
 
-    const container = document.getElementById("posts");
+    const container = document.getElementById("post-form");
 
     posts.forEach((p) => {
       const elem = createPostElement(p);
@@ -127,9 +112,13 @@ loadPosts();
 //   overlay.addEventListener("click", closeModal);
 //   document.addEventListener("keydown");
  
-//   document.addEventListener("keydown", function (e) {
-//     if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-//       modalClose();
-//     }
-//   });
-module.export ={createPostElement}
+  // document.addEventListener("keydown", function (e) {
+  //   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+  //     modalClose();
+  //   }
+  // });
+
+
+// module.export ={createPostElement}
+
+
