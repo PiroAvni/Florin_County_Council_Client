@@ -9,11 +9,10 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/src/assets/favicon.ico">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  -->
+
     <link rel="stylesheet" href="/src/styles/style.css" />
-    <script defer src="./views/index.js"></script>
+    <script defer src="/src/js/views/index.js"></script>
+    <!-- <script defer src="/src/js/views/controllers.js"></script> -->
     <!-- <script defer  src="./views/components/fetchPosts.js" ></script> -->
     <!-- <script type="text/javascript" defer src="./views/components/pagnation.js" ></script> -->
     <title>Florin County Council - Community Site</title>
@@ -82,11 +81,12 @@
                 <img src="https://www.lewispies.co.uk/wp-content/uploads/2020/08/web-top-jobs10-tzr-780x501-1-600x385.jpg"
                     alt="Jobs" />
             </figure>
-            <div class="card-body">
+            <div class="card-body" id="jobs-btn">
                 <h2 class="card-title">Jobs</h2>
-                <p>Job Vacanciess</p>
+                <p>Job Vacancies</p>
                 <div class="card-actions justify-end">
-                    <a href="./jobs.html"><button class="btn ">SEARCH NOW</button></a>
+                    <!-- <a href="./jobs.html"></a> -->
+                        <button class="btn ">SEARCH NOW</button>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                 <img src="https://www.york.ac.uk/media/studenthome/workandvolunteering/images/720px/jobsectorimages/Job%20sector%20image%20-%20Voluntary%20sector.jpg"
                     alt="Jobs" />
             </figure>
-            <div class="card-body">
+            <div class="card-body" id="voluntary-btn">
                 <h2 class="card-title">Voluntary Work</h2>
                 <p>Voluntary Vacancies</p>
                 <div class="card-actions justify-end">
@@ -110,7 +110,7 @@
                 <img src="https://www.yorkshirepost.co.uk/webimg/b25lY21zOjhlMWU2NTljLTVlMDUtNDk2NS1hNTVhLTE0ODRjZDdhYjI4MTowM2I3NGFjMy1hNTE4LTRkMGUtOWRmZi02Mzg5M2I2NWQ5OTk=.jpg?width=1200&enable=upscale"
                     alt="events" />
             </figure>
-            <div class="card-body">
+            <div class="card-body " id="jobs-btn">
                 <h2 class="card-title">Events</h2>
                 <p>Organised Events</p>
                 <div class="card-actions justify-end">
@@ -124,9 +124,9 @@
                 <img
                     src="https://png.pngtree.com/png-clipart/20220719/ourmid/pngtree-important-announcement-design-vector-png-png-image_6006798.png" />
             </figure>
-            <div class="card-body">
+            <div class="card-body" id="announcements-btn">
                 <h2 class="card-title">Announcements</h2>
-                <p>Keep Up To Date.</p>
+                <p>Keep Up To Date</p>
                 <div class="card-actions justify-end">
                     <a href="./Announcements.html"><button class="btn " href="">SEARCH NOW</button></a>
                 </div>
@@ -138,8 +138,8 @@
                 <img
                     src="https://www.sjasd.ca/school/linwood/Parents/CommunityClubs/PublishingImages/Pages/default/CommunityClubs.jpg" />
             </figure>
-            <div class="card-body">
-                <h2 class="card-title">clubs</h2>
+            <div class="card-body" id="clubs-btn">
+                <h2 class="card-title">Clubs</h2>
                 <p>Community Clubs</p>
                 <div class="card-actions justify-end">
                     <a href="./clubs.html"><button class="btn ">SEARCH NOW</button></a>
@@ -152,7 +152,7 @@
                 <img
                     src="https://cdnsm5-ss7.sharpschool.com/UserFiles/Servers/Server_384530/Image/communityservice.jpg" />
             </figure>
-            <div class="card-body">
+            <div class="card-body" id="services-btn">
                 <h2 class="card-title">Services</h2>
                 <p>Other Services</p>
                 <div class="card-actions justify-end">
@@ -238,7 +238,7 @@
             </svg></a>
     </div>
 </footer>
-<script defer src="views/components/pagnation.js"></script>
+
 </body>
 
 </html>

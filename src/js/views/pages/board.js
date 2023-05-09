@@ -1,5 +1,6 @@
-function createPostElement(data) {
+ function createPostElement(data) {
   console.log(data);
+ 
   const post = document.createElement("div");
   // post.onclick()
   post.className = "post";
@@ -12,7 +13,7 @@ function createPostElement(data) {
   const header = document.createElement("h2");
   header.textContent = "Title:";
   header.classList.add("m-2");
-  header.textContent = data["title"];
+  header.textContent = data["post_title"];
   post.appendChild(header);
 
   const categoryTitle = document.createElement("h2");
@@ -32,7 +33,7 @@ function createPostElement(data) {
 
   const content = document.createElement("p");
   content.classList.add("m-2", "card-text");
-  (content.textContent = "content"), data["content"];
+  content.textContent = data["content"];
   post.appendChild(content);
 
   const date = document.createElement("p");
@@ -103,29 +104,32 @@ async function loadPosts() {
 
 loadPosts();
 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
 
-const openModal = function () {
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
-  };
 
-  openModalBtn.addEventListener("click", openModal);
+// const modal = document.querySelector(".modal");
+// const overlay = document.querySelector(".overlay");
+// const openModalBtn = document.querySelector(".btn-open");
+// const closeModalBtn = document.querySelector(".btn-close");
 
-  const closeModal = function () {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
-  };
+// const openModal = function () {
+//     modal.classList.remove("hidden");
+//     overlay.classList.remove("hidden");
+//   };
 
-  closeModalBtn.addEventListener("click", closeModal);
-  overlay.addEventListener("click", closeModal);
-  document.addEventListener("keydown");
+//   openModalBtn.addEventListener("click", openModal);
+
+//   const closeModal = function () {
+//     modal.classList.add("hidden");
+//     overlay.classList.add("hidden");
+//   };
+
+//   closeModalBtn.addEventListener("click", closeModal);
+//   overlay.addEventListener("click", closeModal);
+//   document.addEventListener("keydown");
  
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-      modalClose();
-    }
-  });
+//   document.addEventListener("keydown", function (e) {
+//     if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+//       modalClose();
+//     }
+//   });
+module.export ={createPostElement}

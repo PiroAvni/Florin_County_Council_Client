@@ -19,6 +19,6 @@ To access the community site, please click on the link https://florin-county-cou
 - 
 
 ## Future Features
-- Login/Signup page
-- Post creation
-- Navbar
+- MarketPlace
+- Search functionality
+- 
