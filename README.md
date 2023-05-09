@@ -11,18 +11,9 @@ The aim of this project is to create a community website with the aim of allowin
 To access the community site, please click on the link https://florin-county-council-client.onrender.com/
 
 ## Technologies
-- JavaScript
-- Node.JS
-- NPM
-    - bcrypt
-    - cors
-    - dotenv
-    - express
-    - pg
-    - uuid
-    - morgan
-- PostgreSQL
 - HTML
+- Javascript
+- CSS
 
 ## Features
 - 
