@@ -18,6 +18,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       }),
     };
   
+
     const response = await fetch("https://florin-server-web.onrender.com/users/login", options);
     const data = await response.json();
   

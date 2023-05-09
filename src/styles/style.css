@@ -3,6 +3,7 @@
 @import url("/src/styles/components/pagnation.css");
 @import url("/src/styles/components/buttons.css");
 @import url("/src/styles/components/cards.css");
+/* @import url("/src/styles/pages/board.css"); */
 
 /* Navigation */
 .nav {
@@ -41,8 +42,6 @@
   align-content: flex-end;
 }
 
-.logo-container p {
-}
 .logo-content {
   display: flex;
   justify-content: center;
@@ -147,3 +146,22 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.post{
+  min-width: 555px ;
+  border: 1px solid #e2711d;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  }
+  .post:nth-child(even){
+      background-color: #efe7da;
+      
+  }
+  .post:nth-child(odd){
+      background-color: #fff;
+      
+  }
+  .date-format{
+      font-size:0.7rem;
+      color:rgb(138, 137, 137)
+  }

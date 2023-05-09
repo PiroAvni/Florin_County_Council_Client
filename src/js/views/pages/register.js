@@ -4,7 +4,9 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     const form = new FormData(e.target);
    
     const isAdminResult = form.get('isAdmin') === null ? 0 : 1
+    console.log(form.get)
     const isBusinessResult = form.get('isBusiness') === null ? 0 : 1
+
      console.log(isAdminResult)
     console.log(isAdminResult)
     const options = {

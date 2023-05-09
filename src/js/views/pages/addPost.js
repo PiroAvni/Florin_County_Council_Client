@@ -1,10 +1,13 @@
 //  const form = document.getElementById('post-form);
 
-const form = document.getElementById('form').addEventListener('submit', createPost)
+const form = document.querySelector('fieldset').addEventListener('submit', createPost)
 
 const formData = new FormData(form);
+// console.log(formData)
+for (item of formData){
+    console.log(item[0], item[1])
+}
 
-console.log(formData)
 
 async function createPost(e) {
     e.preventDefault()
@@ -14,7 +17,7 @@ async function createPost(e) {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-            // Authorization: localStorage.getItem("token"),
+            Authorization: localStorage.getItem("token"),
         },
         body: JSON.stringify({
             title: formData.get('post_title'),
@@ -30,5 +33,7 @@ async function createPost(e) {
     const response = await fetch("https://florin-server-web.onrender.com/posts", options);
     if (response.status == 201) {
         e.target.form.value = ' '
-    }
+    }  else {
+        alert(data.error);
+      }
 }
