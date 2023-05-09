@@ -1,0 +1,49 @@
+/* Navigation */
+
+
+
+
+
+/* Entries Section layout    */
+#public-enteries{
+  background-color:#0E4749 ;
+}
+.container{
+display:flex;
+border: 1px sold blue;
+position: relative;
+background-color: #fff;
+}
+
+
+.main-container {
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  border: 1px solid red;
+ 
+ 
+}
+.main-section {
+  position: relative;
+  margin: auto ;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  align-items: center;
+}
+  .col {
+    background-color: #f5ac72;
+    border-radius: 10px;
+    width:800px;
+  }
+
+  .post-container{
+    position: relative;
+    width:100%;
+
+    
+  }
+  
+
+  /* HERO Section */
