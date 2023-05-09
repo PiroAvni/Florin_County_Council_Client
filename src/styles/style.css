@@ -1,8 +1,8 @@
 @import url("base.css");
 @import url("layout.css");
-@import url("./components/pagnation.css");
-@import url("./components/buttons.css");
-@import url("./components//cards.css");
+@import url("/src/styles/components/pagnation.css");
+@import url("/src/styles/components/buttons.css");
+@import url("/src/styles/components/cards.css");
 
 /* Navigation */
 .nav {
