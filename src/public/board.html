@@ -9,9 +9,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/src/assets/favicon.ico">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  -->
+
     <link rel="stylesheet" href="/src/styles/pages/board.css" />
     <link rel="stylesheet" href="/src/styles/pages/registry.css" />
     <link rel="stylesheet" href="/src/styles/components/modal-post.css" />
@@ -116,8 +114,8 @@
             <div class="update">
                 <h2 class="update-desc">Latest Community Posts:</h2>
             </div>
-            <div class="container" id="post-form">
-            </div>
+            <div class="container" id="post-list"></div>
+            <!-- <div class="accordion" id="Comment"></div> -->
             <hr />
             <!-- <form id="post-form">
                 <fieldset>
@@ -190,9 +188,8 @@
                 </svg></a>
         </div>
     </footer>
-    <script defer  src="/src/js/views/pages/board.js"></script>
-    <script defer src="/src/js/views/pages/addPost.js"></script>
-    <script defer src="/src/js/views/pages/deletePost.js"></script>
+    <script src="/src/js/views/pages/board.js"></script>
+   
 </body>
 
 </html

@@ -40,11 +40,7 @@ function createPostElement(data) {
   date.textContent = `Post Date: ${dateFormat}`;
   post.appendChild(date);
 return post
-  // const elements = [title, category, content, date];
-  // elements.forEach((element) => {
-  //   post.appendChild(element);
-    
-  //   container.appendChild(post);
+
     
   // });
 }
