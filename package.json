@@ -1,0 +1,12 @@
+{
+  "name": "florin_client",
+  "version": "1.0.0",
+  "description": "<!-- TABLE OF CONTENTS --> <details>   <summary>Table of Contents</summary>   <ol>     <li><a href=\"#Florin\">About The Project</a></li>     <li><a href=\"#Installation\">Installation </a></li>     <li><a href=\"#Usage\">Usage</a></li>     <li><a href=\"#Demo\">Demo</a></li>     <li><a href=\"#Technologies\">Technologies</a></li>     <li><a href=\"#Process\">Process</a></li>     <li><a href=\"#Challenges\">Challenges & Wins</a>     <li><a href=\"#Contribution\">Contribution</a></li>     <li><a href=\"#License\">License</a></li>   </ol> </details>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
