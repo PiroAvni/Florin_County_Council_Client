@@ -25,13 +25,14 @@ background-color: #fff;
   margin: auto ;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: 90%;
+  max-width: 1200px;
   align-items: center;
+  justify-content: center;
 }
   .col {
     background-color: #f5ac72;
     border-radius: 10px;
-    width:800px;
+   width:1200px;
   }
 
   .post-container{

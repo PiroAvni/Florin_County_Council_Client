@@ -151,7 +151,7 @@ img {
   min-width: 555px ;
   border: 1px solid #e2711d;
   border-radius: 5px;
-  margin-bottom: 0.5rem;
+  margin: 1rem;
   }
   .post:nth-child(even){
       background-color: #efe7da;

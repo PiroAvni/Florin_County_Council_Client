@@ -100,7 +100,17 @@ Wireframes were made on Figma and pages were implemented via HTML, CSS and Boots
 
 # Process
 
-Wireframes were made on Figma and pages were implemented via HTML, CSS and Bootstrap.
+[Here you can find the Figma showing : WireFrames, Kanban and our Database ERD](https://www.figma.com/file/OV4ImyCz2lLMk7zBLjBS08/Lap-2-Project?type=whiteboard&node-id=0%3A1&t=Mxfq6m0Me4zjjEbb-1)
+
+[Stakeholder Map](/src/assets/Stakeholder%20map%20.png)
+
+1. First stage of our process was to combine and share ideas potential features.
+2. Identify stakeholders 
+3. Wireframes were made on Figma and had a color theme to work with
+4. Kanban broad was create to track out backlogs
+5. ERD for the database 
+6. 
+
 
 # Challenges & Wins
 
@@ -109,7 +119,103 @@ Wireframes were made on Figma and pages were implemented via HTML, CSS and Boots
 * Working with JS scripts
 * Making sure the random fetch was only called once so that the corresponding data related to the hints, fun facts, and multiple choice answers were linked (we wouldn't want them to be from different countries).
 
+* filter on the hompage to display up to date category for each service
 ### Wins
+
+Code to create new Elements for each:
+
+```js
+async function createPostElement(data) {
+  console.log(data);
+  const container = document.getElementById("post-list");
+
+  const post = document.createElement("div");
+  post.className = "post";
+  post.id = "card"
+
+  const header = document.createElement("h2");
+  // header.textContent = "Title:";
+  header.classList.add("m-2", "card-title");
+  header.textContent = data["title"];
+  post.appendChild(header);
+
+  const category = document.createElement("p");
+  category.classList.add("m-2", "card-subtitle");
+  category.textContent = data["category"];
+  post.appendChild(category);
+
+
+  const content = document.createElement("p");
+  content.classList.add("m-2", "card-text");
+  content.textContent = data["content"];
+  post.appendChild(content);
+
+  const date = document.createElement("p");
+  const dateTitle = document.createElement("p");
+  dateTitle.classList.add("date-format", "m-2");
+  dateTitle.textContent = "created:";
+  date.classList.add("date-format", "m-2");
+  const dateFormat = new Date(data["post_date"]).toDateString();
+  date.textContent = `Post Date: ${dateFormat}`;
+  post.appendChild(date);
+
+  const btnContainer = document.createElement("div");
+  btnContainer.className = "flex btn-container";
+  btnContainer.style.cssText ="display:flex, justify-content: space-between"
+  post.appendChild(btnContainer);
+
+  const commentBtn = document.createElement("div");
+  commentBtn.className = "btn", "m-1","w-75";
+  commentBtn.id = "btn-comment"
+  commentBtn.textContent = "Comments"
+  btnContainer.appendChild(commentBtn)
+
+const deleteBtn = document.createElement("div");
+  deleteBtn.className = "btn btn-delete";
+  deleteBtn.id = "btn-delete"
+  deleteBtn.textContent = "Delete"
+  btnContainer.style.cssText ="justify-content: space-between"
+  btnContainer.appendChild(deleteBtn)
+ const comment = document.createElement("div");
+  comment.className = "comment";
+  comment.style.cssText ="display:flex, justify-content: space-between, margin:auto"
+  
+  comment.id = `comment-container-${data["post_id"]}`
+
+  commentBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const commentData = await loadComments(data["id"])
+     console.log('line 54', commentData)
+    if (commentData.length !== 0 || commentData !== undefined) {
+      commentData.forEach((c) => {
+        const newComment = document.createElement('p');
+        console.log('line51', newComment)
+        newComment.textContent = c["comment"];
+        document.getElementById(`comment-container-${data["post_id"]}`).appendChild(newComment);
+        document.getElementById('commentBtn').disabled = true
+      })
+    }
+  })
+
+```
+
+Here is the code that help filter the post in the home page.
+When clicking on each service thumbnail it allowed to display an up-to date category for that particular service.
+
+```js
+document.getElementById("jobs-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+    loadPosts("Jobs")
+});
+
+```
+
+
 
 * We completed a functional MVP.
 * Challenges were dealt with.

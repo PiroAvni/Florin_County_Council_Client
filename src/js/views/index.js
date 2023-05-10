@@ -11,20 +11,12 @@ function createPostElement(data) {
   header.textContent = data["title"];
   post.appendChild(header);
 
-  // const categoryTitle = document.createElement("h2");
-  // categoryTitle.classList.add("card-subtitle");
-  // categoryTitle.textContent = "Category:";
-  // post.appendChild(categoryTitle);
 
   const category = document.createElement("p");
   category.classList.add("m-2","card-subtitle");
   category.textContent = data["category"];
   post.appendChild(category);
 
-  // const contentTitle = document.createElement("h2");
-  // contentTitle.classList.add("card-subtitle");
-  // contentTitle.textContent = "Content:";
-  // post.appendChild(contentTitle);
 
   const content = document.createElement("p");
   content.classList.add("m-2", "card-text");

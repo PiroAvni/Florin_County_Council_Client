@@ -40,3 +40,15 @@ border-radius: 5px;
     font-size:0.7rem;
     color:rgb(138, 137, 137)
 }
+
+
+.btn-container{
+    display: flex;
+justify-content: space-around;
+margin: .5rem;
+}
+.comment p{
+    margin:.7rem; 
+    margin-left: .5rem;
+   
+}
