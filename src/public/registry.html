@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,14 +7,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="/src/assets/favicon.ico">
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  -->
-  <link rel="stylesheet" href="/src/styles/pages/registry.css" />
-
-  <script defer src="/src/js/views/pages/register.js"></script>
-  <!-- <script type="text/javascript" defer src="./views/components/pagnation.js" ></script> -->
+  <link rel="shortcut icon" href="../.././src/assets/favicon.ico">
+  <link rel="stylesheet" href="../styles/pages/registry.css" />
+  <script defer src="../js/views/pages/register.js"></script>
+  
   <title>Florin County Council - Community Site</title>
 </head>
 
@@ -29,18 +24,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <!-- <button type="button" class="btn-nav">
-              <a class="nav-link" aria-current="page" href="/src/">Login / Register</a>
-            </button> -->
+
           </li>
           <li class="nav-item">
 
-            <a class="nav-link nav-home" aria-current="page" href="/index.html">Home</a>
+            <a class="nav-link nav-home" aria-current="page" href="../../index.html">Home</a>
           </li>
         </ul>
         <div class="logo-content">
           <a class="navbar-brand" href="#">
-            <img src="/src/assets/logo_fcc.png" alt="logo">
+            <img src="../assets/logo_fcc.png" alt="logo">
         </div>
         <p>Florin County Council</p>
         </a>
@@ -58,29 +51,30 @@
     <div class="blur-effect">
       <main class="form-signin w-100 m-auto">
         <form id="register-form">
-          <img class=" reg-logo mb-2" src="/src/assets/logo_fcc.png" alt="logo">
+          <img class=" reg-logo mb-2" src="../assets/logo_fcc.png" alt="logo">
           <h1 class="h3 mb-3 fw-normal">Please Register</h1>
 
           <!-- Radio buttons -->
-<div class="radio-container">
-  
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="radio-btn" id="isAdmin"  checked>
-    <label class="form-check-label" for="flexRadioDefault1">
-      Admin
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="radio-btn" id="isBusiness" >
-    <label class="form-check-label" for="flexRadioDefault2">
-      Business
-    </label>
-  </div>
-</div>
+          <div class="radio-container">
 
-<!-- Form Section -->
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio-btn" id="isAdmin" checked>
+              <label class="form-check-label" for="flexRadioDefault1">
+                Admin
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio-btn" id="isBusiness">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Business
+              </label>
+            </div>
+          </div>
+
+          <!-- Form Section -->
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput username" placeholder="Username" id="username" name="username">
+            <input type="text" class="form-control" id="floatingInput username" placeholder="Username" id="username"
+              name="username">
             <label for="floatingInput">Username</label>
           </div>
           <div class="form-floating">
@@ -88,19 +82,13 @@
               name="password">
             <label for="floatingPassword password">Password</label>
           </div>
-
-
-
           <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
           <p class="mt-5 mb-3 text-body-secondary">© Florin County Council 2023</p>
-
-
         </form>
-        <p>Already registered? <a href="/src/public/login.html"><span>Log in here</span></a>.</p>
+        <p>Already registered? <a href="../../src/public/login.html"><span>Log in here</span></a>.</p>
     </div>
     </main>
   </section>
-
   <footer class="footer items-center p-4 bg-neutral text-neutral-content">
     <div class=" footer-img items-center  ">
       <svg fill="#fff" class="filter-orange" width="36" height="36" viewBox="0 0 24 24"

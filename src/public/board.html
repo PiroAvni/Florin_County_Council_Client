@@ -8,16 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="/src/assets/favicon.ico">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  -->
-    <link rel="stylesheet" href="/src/styles/pages/board.css" />
-    <link rel="stylesheet" href="/src/styles/pages/registry.css" />
-    <link rel="stylesheet" href="/src/styles/components/modal-post.css" />
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/pages/board.css" />
+    <link rel="stylesheet" href="../styles/pages/registry.css" />
+    <link rel="stylesheet" href="../styles/components/modal-post.css" />
+    <script defer src="../js/views/pages/board.js"></script>
    
-    <!-- <script defer  src="./views/components/fetchPosts.js" ></script> -->
-    <!-- <script type="text/javascript" defer src="./views/components/pagnation.js" ></script> -->
     <title>Florin County Council - Community Site</title>
 </head>
 
@@ -35,7 +31,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <button type="button" class="btn-nav">
-                            <a class="nav-link" aria-current="page" href="/index.html">LOG OUT</a>
+                            <a class="nav-link" aria-current="page" href="../../index.html">LOG OUT</a>
                         </button>
                     </li>
                     <li class="user-message">
@@ -46,16 +42,12 @@
 
                 <div class="logo-content">
                     <a class="navbar-brand" href="#">
-                        <img src="/src/assets/logo_fcc.png" alt="logo">
+                        <img src="../assets/logo_fcc.png" alt="logo">
                 </div>
                 <p>Florin County Council</p>
                 </a>
             </div>
 
-            <!-- <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Search</button>
-            </form> -->
         </div>
         </div>
     </nav>
@@ -65,12 +57,7 @@
         <em class="register-content">Everything local together in one place</em>
     </header>
     <hr />
-    <!-- Modal -->
-    <!-- <section class="modal hidden">
-        <div class="flex">
-            <img src="user.png" width="50px" height="50px" alt="user" />
-            <button class="btn-close">⨉</button>
-          </div> -->
+ 
             <form id="form">
                 <fieldset>
                     <div class="mb-3">
@@ -116,43 +103,10 @@
             <div class="update">
                 <h2 class="update-desc">Latest Community Posts:</h2>
             </div>
-            <div class="container" id="post-form">
-            </div>
+            <div class="container" id="post-list"></div>
+        
             <hr />
-            <!-- <form id="post-form">
-                <fieldset>
-                    <div class="mb-3">
-                        <label for="title" class="form-label ">Title:</label>
-                        <input type="text" class="form-control w-45" id="title" aria-describedby="content-title"
-                            placeholder="Title">
-                    </div>
-
-                    <fieldset>
-                        <div class="mb-3">
-                            <label for="DataList" class="form-label">Category:</label>
-                            <input class="form-control" list="datalistOptions" id="DataList"
-                                placeholder="Select Category">
-                            <datalist id="datalistOptions">
-                                <option value="Jobs">
-                                <option value="Voluntary Work">
-                                <option value="Events">
-                                <option value="Announcements">
-                                <option value="Clubs">
-                                <option value="Services"></option>
-                            </datalist>
-                        </div>
-                    </fieldset>
-                    <div class="mb-3">
-                        <fieldset>
-                            <label for="title" class="form-label ">Content:</label>
-                            <textarea id="content" class="form-control" name="content" required></textarea>
-                    </div>
-                </fieldset>
-
-                <button type="submit" class="btn btn-primary">Post</button>
-                <button type="submit" class="btn btn-primary">Update</button>
-                <button type="submit" class="btn btn-primary">Delete</button>
-            </form> -->
+        
         </section>
     </main>
 
@@ -190,9 +144,8 @@
                 </svg></a>
         </div>
     </footer>
-    <script defer  src="/src/js/views/pages/board.js"></script>
-    <script defer src="/src/js/views/pages/addPost.js"></script>
-    <script defer src="/src/js/views/pages/deletePost.js"></script>
+   
+   
 </body>
 
 </html

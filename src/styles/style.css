@@ -1,6 +1,6 @@
 @import url("base.css");
 @import url("layout.css");
-@import url("/src/styles/components/pagnation.css");
+/* @import url("/src/styles/components/pagnation.css"); */
 @import url("/src/styles/components/buttons.css");
 @import url("/src/styles/components/cards.css");
 /* @import url("/src/styles/pages/board.css"); */
@@ -114,7 +114,7 @@
   margin: 3rem;
   font-size: 3rem;
   font-weight: 700;
-  color: #e2711d;
+  color:#0e4749;
 }
 
 img {
@@ -151,7 +151,7 @@ img {
   min-width: 555px ;
   border: 1px solid #e2711d;
   border-radius: 5px;
-  margin-bottom: 0.5rem;
+  margin: 1rem;
   }
   .post:nth-child(even){
       background-color: #efe7da;
