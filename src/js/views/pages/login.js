@@ -18,11 +18,12 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       }),
     };
   
+
     const response = await fetch("https://florin-server-web.onrender.com/users/login", options);
     const data = await response.json();
   
     if (response.status == 200) {
-      localStorage.setItem("token", data.token);
+      localStorage.removeItem("token");
       window.location.assign("board.html");
     } else {
       alert(data.error);

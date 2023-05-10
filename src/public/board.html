@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/src/styles/pages/board.css" />
     <link rel="stylesheet" href="/src/styles/pages/registry.css" />
     <link rel="stylesheet" href="/src/styles/components/modal-post.css" />
-    <script defer src="/src/js/views/pages/board.js"></script>
+   
     <!-- <script defer  src="./views/components/fetchPosts.js" ></script> -->
     <!-- <script type="text/javascript" defer src="./views/components/pagnation.js" ></script> -->
     <title>Florin County Council - Community Site</title>
@@ -71,19 +71,20 @@
             <img src="user.png" width="50px" height="50px" alt="user" />
             <button class="btn-close">⨉</button>
           </div> -->
-            <form id="post-form">
+            <form id="form">
                 <fieldset>
                     <div class="mb-3">
                         <label for="title" class="form-label ">Title:</label>
                         <input type="text" class="form-control w-45" id="title" aria-describedby="content-title"
-                            placeholder="Title">
+                            placeholder="Title"
+                            name="title">
                     </div>
 
-                    <fieldset>
+                    <!-- <fieldset> -->
                         <div class="mb-3">
                             <label for="DataList" class="form-label">Category:</label>
-                            <input class="form-control" list="datalistOptions" id="DataList"
-                                placeholder="Select Category">
+                            <input  class="form-control" list="datalistOptions" id="DataList"
+                                placeholder="Select Category" name="category">
                             <datalist id="datalistOptions">
                                 <option value="Jobs">
                                 <option value="Voluntary Work">
@@ -93,7 +94,7 @@
                                 <option value="Services"></option>
                             </datalist>
                         </div>
-                    </fieldset>
+                    <!-- </fieldset> -->
                     <div class="mb-3">
                         <fieldset>
                             <label for="title" class="form-label ">Content:</label>
@@ -101,9 +102,9 @@
                     </div>
                 </fieldset>
 
-                <button type="submit" value="add-post" class="btn btn-primary">Post</button>
-                <button type="submit" class="btn btn-primary">Update</button>
-                <button type="submit" class="btn btn-primary">Delete</button>
+                <button type="submit" id="postBtn" value="post" class="btn btn-primary">Post</button>
+                <!-- <button type="submit" value="update" class="btn btn-primary">Update</button>
+                <button type="submit" value="delete" class="btn btn-primary">Delete</button> -->
             </form>
     </section>
     <!-- <div class="overlay hidden"></div>
@@ -115,7 +116,7 @@
             <div class="update">
                 <h2 class="update-desc">Latest Community Posts:</h2>
             </div>
-            <div class="container" id="posts">
+            <div class="container" id="post-form">
             </div>
             <hr />
             <!-- <form id="post-form">
@@ -189,7 +190,9 @@
                 </svg></a>
         </div>
     </footer>
-
+    <script defer  src="/src/js/views/pages/board.js"></script>
+    <script defer src="/src/js/views/pages/addPost.js"></script>
+    <script defer src="/src/js/views/pages/deletePost.js"></script>
 </body>
 
 </html
