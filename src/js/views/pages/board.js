@@ -1,6 +1,7 @@
 console.log("hello")
 
 
+// MOVE TO - addPostElement.js
 
 // async function createPostElement(data) {
 //   console.log(data);
@@ -57,7 +58,7 @@ console.log("hello")
 
 //   comment.className = "comment";
 //   comment.style.cssText ="display:flex, justify-content: space-between, margin:auto"
-  
+
 // //   comment.id = `comment-container-${data["post_id"]}`
 // // console.log(`comment-container-${data["post_id"]}`)
 
@@ -77,7 +78,7 @@ console.log("hello")
 //         newComment.textContent = c["comment"];
 //         const commentId = `comment-container-${c["post_id"]}`
 //         document.getElementById(commentId).appendChild(commentContainer);
-     
+
 //       })
 //     }
 //     commentBtn.removeEventListener('click', handleCommentClick)
@@ -108,156 +109,140 @@ console.log("hello")
 //   })
 // }
 
+
+
 async function loadPosts() {
-  const options = {
-    headers: {
-      Authorization: localStorage.getItem("token"),
-    },
-  };
-
-  const response = await fetch(
-    "https://florin-server-web.onrender.com/posts",
-    options
-  );
-  console.log(response);
-  if (response.status == 200) {
-    const posts = await response.json();
-    posts.forEach((p) => {
-      createPostElement(p)
-    });
-  } else {
-    window.location.assign("./login.js");
-  }
-}
-loadPosts();
-
-// async function loadComments(comment_id) {
-//   const response = await fetch(
-//     `https://florin-server-web.onrender.com/comments/${comment_id}`
-//   );
-//   const comments = await response.json();
-//   console.log(comments);
-//   return comments
-//   //console.log(response);
-//   if (response.status == 200) {
-//   }
-// }
-
-
-// function logout(){
-//   localStorage.removeItem('token');
-//   const options = {
-//     method: "DELETE",
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json',
-//       'Authorization': localStorage.getItem("token")
-//     }
-//   }
-//   const response =  fetch(`https://florin-server-web.onrender.com/logout`, options);
-//   if (response.status == 200) {
-  
-//     window.location.assign("./login.html");
-//   }
-// }
-
-
-
-// async function createDeletePost(post, post_id) {
-
-//   return deleteBtn
-// }
-
-
-
-
-
-function createNewPost() {
-  document.getElementById("form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
-    const currentDate = `${year}-${month}-${day}`;
-    console.log(currentDate);
-
-    const form = new FormData(e.target);
-
-    for (item of form) {
-      console.log(item[0], item[1])
-    }
-    console.log(localStorage.getItem("token"))
     const options = {
-      method: "POST",
       headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        'Authorization': localStorage.getItem("token")
+        Authorization: localStorage.getItem("token"),
       },
-      body: JSON.stringify({
-        title: form.get("title"),
-        content: form.get("content"),
-        category: form.get("category"),
-        author_id: 1,
-        post_date: currentDate
-      }),
     };
-console.log(options.headers);
-    const result = await fetch(
-      'https://florin-server-web.onrender.com/posts',
+
+    const response = await fetch(
+      "https://florin-server-web.onrender.com/posts",
       options
     );
+    console.log(response);
+    try {
 
-    if (result.status == 201) {
-      alert("you post was successfully sent")
-      window.location.reload();
+      const posts = await response.json();
+      posts.forEach((p) => {
+          createPostElement(p)
+        })
+      }
+      catch (error) {
+        console.log(error.message)
+      }
     }
-  });
-}
-createNewPost()
 
-// function UpdatePost() {
-//   document.getElementById("form").addEventListener("submit", async (e) => {
-//     e.preventDefault();
-//     const today = new Date();
-//     const year = today.getFullYear();
-//     const month = String(today.getMonth() + 1).padStart(2, '0');
-//     const day = String(today.getDate()).padStart(2, '0');
-//     const currentDate = `${year}-${month}-${day}`;
-//     console.log(currentDate);
+    loadPosts();
 
-//     const form = new FormData(e.target);
+    // MOVE TO - addPostElement.js
 
-//     for (item of form) {
-//       console.log(item[0], item[1])
-//     }
-//     console.log(e.target)
-//     const options = {
-//       method: "POST",
-//       headers: {
-//         Accept: "application/json",
-//         "Content-Type": "application/json",
-//         'Authorization': localStorage.getItem('token'),
-//       },
-//       body: JSON.stringify({
-//         title: form.get("title"),
-//         content: form.get("content"),
-//         category: form.get("category"),
-//         date: currentDate,
-//         author_id: 1,
-//       }),
-//     };
+    // async function loadComments(comment_id) {
+    //   const response = await fetch(
+    //     `https://florin-server-web.onrender.com/comments/${comment_id}`
+    //   );
+    //   const comments = await response.json();
+    //   console.log(comments);
+    //   return comments
+    //   //console.log(response);
+    //   if (response.status == 200) {
+    //   }
+    // }
 
-//     const result = await fetch(
-//       "https://florin-server-web.onrender.com/posts/",
-//       options
-//     );
 
-//     if (result.status == 201) {
-//       alert("you post was successfully sent")
-//       window.location.reload();
-//     }
-//   });
-// }
-// updatePost()
+
+
+
+
+
+    function createNewPost() {
+      document.getElementById("form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const currentDate = `${year}-${month}-${day}`;
+        console.log(currentDate);
+
+        const form = new FormData(e.target);
+
+        for (item of form) {
+          console.log(item[0], item[1])
+        }
+        console.log(localStorage.getItem("token"))
+        const options = {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            'Authorization': localStorage.getItem("token")
+          },
+          body: JSON.stringify({
+            title: form.get("title"),
+            content: form.get("content"),
+            category: form.get("category"),
+            author_id: 1,
+            post_date: currentDate
+          }),
+        };
+        console.log(options.headers);
+        const result = await fetch(
+          'https://florin-server-web.onrender.com/posts',
+          options
+        );
+
+        if (result.status == 201) {
+          alert("you post was successfully sent")
+          window.location.reload();
+        }
+      });
+    }
+    createNewPost()
+
+    // function UpdatePost() {
+    //   document.getElementById("form").addEventListener("submit", async (e) => {
+    //     e.preventDefault();
+    //     const today = new Date();
+    //     const year = today.getFullYear();
+    //     const month = String(today.getMonth() + 1).padStart(2, '0');
+    //     const day = String(today.getDate()).padStart(2, '0');
+    //     const currentDate = `${year}-${month}-${day}`;
+    //     console.log(currentDate);
+
+    //     const form = new FormData(e.target);
+
+    //     for (item of form) {
+    //       console.log(item[0], item[1])
+    //     }
+    //     console.log(e.target)
+    //     const options = {
+    //       method: "POST",
+    //       headers: {
+    //         Accept: "application/json",
+    //         "Content-Type": "application/json",
+    //         'Authorization': localStorage.getItem('token'),
+    //       },
+    //       body: JSON.stringify({
+    //         title: form.get("title"),
+    //         content: form.get("content"),
+    //         category: form.get("category"),
+    //         date: currentDate,
+    //         author_id: 1,
+    //       }),
+    //     };
+
+    //     const result = await fetch(
+    //       "https://florin-server-web.onrender.com/posts/",
+    //       options
+    //     );
+
+    //     if (result.status == 201) {
+    //       alert("you post was successfully sent")
+    //       window.location.reload();
+    //     }
+    //   });
+    // }
+    // updatePost()

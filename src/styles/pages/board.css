@@ -43,9 +43,12 @@ border-radius: 5px;
     background-color: #fff;
     
 }
-.date-format{
+.date-format {
     font-size:0.7rem;
-    color:rgb(138, 137, 137)
+    color:rgb(138, 137, 137);
+    align-self: end;
+    text-align: left;;
+   
 }
 
 
@@ -54,8 +57,4 @@ border-radius: 5px;
 justify-content: space-around;
 margin: .5rem;
 }
-.comment p{
-    margin:.7rem; 
-    margin-left: .5rem;
-   
-}
+

@@ -79,7 +79,7 @@ async function loadPosts(category) {
     // window.location.assign("./login.js");
   }
 }
-loadPosts();
+loadPosts('services');
 
 // Service Buttons
 

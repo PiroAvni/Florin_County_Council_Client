@@ -1,21 +1,50 @@
 .btn-container{
     display: flex;
-justify-content: space-around;
+
 margin: .5rem;
 }
 .comment p{
     margin:.7rem; 
     margin-left: .5rem;
-   
+   align-items:flex-start;
 }
-.date-format{
-    font-size:0.7rem;
-    color:rgb(138, 137, 137);
-    text-align: left;
-}
+
 .comment-container{
+    height: 100px;
+}
+.reply-btn{
+    justify-self: flex-start;
+    align-self: start;
+    margin-right: .5rem;
+    height: 45px;
+    
+}
+#btn-comment{
+ justify-content: start;
+}
+
+.display-comments{
     display: flex;
     justify-content:space-between;
     height: 70px;
-
+    margin:0;
+}
+.message-content{
+    display: flex;
+   
+    flex-direction: row;
+    justify-content:space-between;
+}
+.date-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 50px;
+}
+.date-format {
+    font-size:0.7rem;
+    color:rgb(138, 137, 137);
+    align-self: end;
+    text-align: left;;
+   
 }

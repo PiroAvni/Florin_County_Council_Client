@@ -6,7 +6,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   const options = {
     method: "POST",
     headers: {
-      Accept: "application/json",
+      "Accept": "application/json",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
