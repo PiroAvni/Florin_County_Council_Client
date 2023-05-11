@@ -81,6 +81,7 @@ form {
 }
 .floating-input > label {
   position: absolute;
+  color:#e2711d;
   top: 0;
   left: 0;
   z-index: 2;

@@ -52,7 +52,7 @@ const deleteBtn = document.createElement("div");
 
   btnContainer.style.cssText = "justify-content: space-between";
   btnContainer.appendChild(deleteBtn);
-
+console.log(deleteBtn);
   deleteBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     console.log(localStorage.getItem("token"));
@@ -61,7 +61,7 @@ const deleteBtn = document.createElement("div");
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
+        "Authorization": localStorage.getItem("token"),
       },
     };
     const response = await fetch(
@@ -69,7 +69,14 @@ const deleteBtn = document.createElement("div");
       options
     );
     const res = await response.json();
-    console.log(`data submit: ${JSON.stringify(res)}`);
+    
+    console.log("this is a string",res)
+    if (res.status == 201) {
+      alert("you post was successfully sent")
+      window.location.reload();
+    }else{
+      alert('Unable to Delete post')
+    }
   });
 
 }
