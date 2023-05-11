@@ -48,6 +48,15 @@ To access the community site, please click on the link  [Live Site](https://flor
 
 To access the server side, please click on the link [Server](https://github.com/yrossan/florin_server)
 
+
+
+## Demo
+
+![Demo]( "Demo")
+
+
+## Images
+![Laptop](/src/assets/mobile) ![Ipad](/src/assets/mobile-1)
 ## Technologies
 
 The technologies used to build the client:
@@ -64,25 +73,12 @@ The technologies used to build the client:
 
 [Stakeholder Map](/src/assets/Stakeholder%20map%20.png)
 
-1. First stage of our process was to combine and share ideas potential features.
-2. Identify stakeholders 
+1. Combine and share ideas on potential features.
+2. Identify stakeholders - Stakeholder map
 3. Wireframes were made on Figma and had a color theme to work with
 4. Kanban broad was create to track out backlogs
 5. ERD for the database 
-6. 
-
-# Challenges & Wins
-
-### Challenges
-
-* Debugging css and Javascript, having to console.log to check where code was breaking and understanding the error was from client or server side.
-* 
-
-
-## Demo
-
-![Demo]( "Demo")
-
+   
 ## Features
 
 - User Registration
@@ -109,10 +105,11 @@ The technologies used to build the client:
 
 ### Challenges
 
-* Working with JS scripts
-* Making sure the random fetch was only called once so that the corresponding data related to the hints, fun facts, and multiple choice answers were linked (we wouldn't want them to be from different countries).
 
-* filter on the hompage to display up to date category for each service
+* Making sure the random fetch was only called once so that the corresponding data related to the hints, fun facts, and multiple choice answers were linked (we wouldn't want them to be from different countries).
+*  Uploading post or category entries on load-up and having a button to pre select category entries.
+*  On the registry for both radio button to select Admin or Business, we have difficulties passing the value back to the database for authorization.
+*  Creating a function to to create HTML elements for the entries.
 ### Wins
 
 Code to create new Elements for each:
@@ -192,10 +189,35 @@ const deleteBtn = document.createElement("div");
 
 ```
 
-Here is the code that help filter the post in the home page.
-When clicking on each service thumbnail it allowed to display an up-to date category for that particular service.
+The code to upload post / entries.
+When clicking on each service button it allowed to display an up-to date category for that particular service.
 
 ```js
+async function loadPosts(category) {
+  const options = {
+    headers: {
+      Authorization: localStorage.getItem("token"),
+    },
+  };
+
+  const response = await fetch(
+    `https://florin-server-web.onrender.com/posts/${category}`,
+    options
+  );
+  console.log(response);
+  if (response.status == 200) {
+    const posts = await response.json();
+    posts.forEach((p) => {
+      createPostElement(p)
+    });
+  } else {
+    // window.location.assign("./login.js");
+  }
+}
+loadPosts('services');
+
+// Service Buttons
+
 document.getElementById("jobs-btn").addEventListener("click", (e) => {
   e.preventDefault();
   const element = document.querySelectorAll(".post")
@@ -205,6 +227,67 @@ document.getElementById("jobs-btn").addEventListener("click", (e) => {
   })
     loadPosts("Jobs")
 });
+
+document.getElementById("voluntary-btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    const element = document.querySelectorAll(".post")
+    element.forEach(post =>{
+      console.log('1')
+      post.remove();
+    })
+    loadPosts("voluntary");
+});
+
+document.getElementById("events-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+  loadPosts("events");
+});
+
+document.getElementById("announcements-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+  loadPosts("announcements");
+});
+
+document.getElementById("announcements-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+  loadPosts("announcements");
+});
+
+document.getElementById("clubs-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+  loadPosts("clubs");
+});
+
+document.getElementById("services-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const element = document.querySelectorAll(".post")
+  element.forEach(post =>{
+    console.log('1')
+    post.remove();
+  })
+  loadPosts("services");
+});
+
 
 ```
 
