@@ -29,27 +29,21 @@ section > .update-desc{
     font-size: 2rem;
     color:#002626 ;
 }
-.post{
+/* .post{
 min-width: 555px ;
-
+margin: 10px;
 border: 1px solid #e2711d;
 border-radius: 5px;
-}
-.post:nth-child(even){
+} */
+/* .post:nth-child(even){
     background-color: #efe7da;
     
 }
 .post:nth-child(odd){
     background-color: #fff;
     
-}
-.date-format {
-    font-size:0.7rem;
-    color:rgb(138, 137, 137);
-    align-self: end;
-    text-align: left;;
-   
-}
+} */
+
 
 
 .btn-container{

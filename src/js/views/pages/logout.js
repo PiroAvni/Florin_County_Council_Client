@@ -15,6 +15,7 @@ document.getElementById("log-out").addEventListener("click", async (e) => {
     
     console.log('before',localStorage.getItem("token"))
     localStorage.removeItem("token");
+    localStorage.removeItem("username");
     console.log('after',localStorage.getItem("token"))
     window.location.assign("login.html");
   });
