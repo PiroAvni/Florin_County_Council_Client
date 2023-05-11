@@ -60,14 +60,23 @@ The technologies used to build the client:
 
 # Process
 
-Wireframes were made on Figma and pages were implemented via HTML, CSS and Bootstrap.
+[Here you can find the Figma showing : WireFrames, Kanban and our Database ERD](https://www.figma.com/file/OV4ImyCz2lLMk7zBLjBS08/Lap-2-Project?type=whiteboard&node-id=0%3A1&t=Mxfq6m0Me4zjjEbb-1)
+
+[Stakeholder Map](/src/assets/Stakeholder%20map%20.png)
+
+1. First stage of our process was to combine and share ideas potential features.
+2. Identify stakeholders 
+3. Wireframes were made on Figma and had a color theme to work with
+4. Kanban broad was create to track out backlogs
+5. ERD for the database 
+6. 
 
 # Challenges & Wins
 
 ### Challenges
 
-* Working with JS scripts
-* Making sure the random fetch was only called once so that the corresponding data related to the hints, fun facts, and multiple choice answers were linked (we wouldn't want them to be from different countries).
+* Debugging css and Javascript, having to console.log to check where code was breaking and understanding the error was from client or server side.
+* 
 
 
 ## Demo
@@ -80,8 +89,7 @@ Wireframes were made on Figma and pages were implemented via HTML, CSS and Boots
 - User Login
 - Create Posts
 - Delete Posts
-- Update Posts
-- Filtered Posts
+- Selected Posts via category
 
 ## Future Features
 - MarketPlace
@@ -96,21 +104,6 @@ Wireframes were made on Figma and pages were implemented via HTML, CSS and Boots
 - Advertising for local business
 - Admin Section
 - Business Section
-
-
-# Process
-
-[Here you can find the Figma showing : WireFrames, Kanban and our Database ERD](https://www.figma.com/file/OV4ImyCz2lLMk7zBLjBS08/Lap-2-Project?type=whiteboard&node-id=0%3A1&t=Mxfq6m0Me4zjjEbb-1)
-
-[Stakeholder Map](/src/assets/Stakeholder%20map%20.png)
-
-1. First stage of our process was to combine and share ideas potential features.
-2. Identify stakeholders 
-3. Wireframes were made on Figma and had a color theme to work with
-4. Kanban broad was create to track out backlogs
-5. ERD for the database 
-6. 
-
 
 # Challenges & Wins
 
