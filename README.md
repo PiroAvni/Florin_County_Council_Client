@@ -54,7 +54,8 @@ To access the server side, please click on the link [Server](https://github.com/
 
 
 ## Images
-![Laptop](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile.png) ![Ipad](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile%20(1).png)
+![Laptop ]{ float: center(https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile.png){: style="float: center"};
+![Ipad](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile%20(1).png){: style="float: center"};
 ## Technologies
 
 The technologies used to build the client:
