@@ -58,6 +58,7 @@ console.log(deleteBtn);
 
   deleteBtn.addEventListener("click", async (e) => {
     e.preventDefault();
+    window.confirm(`Please confirm to delete: ${data["title"]} `)
     console.log(localStorage.getItem("token"));
     const options = {
       method: "DELETE",
