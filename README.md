@@ -48,15 +48,13 @@ To access the community site, please click on the link  [Live Site](https://flor
 
 To access the server side, please click on the link [Server](https://github.com/yrossan/florin_server)
 
-
-
 ## Demo
 
-![Demo]( "Demo")
+![Demo]( ["Demo"](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/Florin%20County%20Council%20-%20Community%20Site%20-%20Google%20Chrome%202023-05-11%2021-37-45.mp4))
 
 
 ## Images
-![Laptop](/src/assets/mobile) ![Ipad](/src/assets/mobile-1)
+![Laptop](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile.png) ![Ipad](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/mobile%20(1).png)
 ## Technologies
 
 The technologies used to build the client:
@@ -71,7 +69,7 @@ The technologies used to build the client:
 
 [Here you can find the Figma showing : WireFrames, Kanban and our Database ERD](https://www.figma.com/file/OV4ImyCz2lLMk7zBLjBS08/Lap-2-Project?type=whiteboard&node-id=0%3A1&t=Mxfq6m0Me4zjjEbb-1)
 
-[Stakeholder Map](/src/assets/Stakeholder%20map%20.png)
+[Stakeholder Map](https://github.com/PiroAvni/Florin_County_Council_Client/blob/staging/src/assets/Stakeholder%20map%20.png)
 
 1. Combine and share ideas on potential features.
 2. Identify stakeholders - Stakeholder map
