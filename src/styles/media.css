@@ -1,0 +1,23 @@
+@media screen and (min-width: 500px) and (max-width: 1440px)   {
+  .content-container {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .col {
+    min-width: 600px;
+  }
+  .card-list{
+    width:700px;
+  }
+  .container{
+    background-color:#0E4749 ;
+  }
+  .title-container h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #fff;
+}
+}
+
+@media screen and (max-width: 1200px) {
+}

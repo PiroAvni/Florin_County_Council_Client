@@ -1,85 +1,81 @@
 /* Card items */
-.content-container{
-    margin: 3rem;
-    display:flex;
-    flex-direction: row;
-    gap:2rem;
-    height: 300px;
-    align-items: center;
-    justify-content: center;
+.content-container {
+  margin: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
 }
 .card-container {
-    margin: 3rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    height: 300px;
-    align-items: center;
-    justify-content: center;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
 }
-.card{
-    margin: 2rem;
-}
-.content-card{
 
-    height: 200px;
-    width:300px;
-    border: 1px solid #e2711d;
-    }
+.card-list {
+  margin: 2rem;
+}
+
+.card.image-full:before,
+.card.image-full > * {
+}
+
 .content-card .card-title {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
+img {
+  width: 100%;
+  height: inherit;
+}
 .content-card {
-    height: 200px;
-    width: 300px;
-    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-    
+  height: 222px;
+  width: 221px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  border: 1px solid #e2711d;
 }
-.content-card:hover{
-    transform: scale(1.10, 1.10);
-   
-}
-.card-body{
-flex-grow: no ;
-font-size: 1rem;
+.content-card:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .card-title {
-  
-    font-weight: bold;
+  font-weight: bold;
 }
 
-
 .card-subtitle {
-    font-weight: bold;
-    text-align: left;
-    padding: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.5rem;
 }
 
 .card-text {
-    text-align: left;
-    padding: 0.5rem;
+  text-align: left;
+  padding: 0.5rem;
 }
-.content-title{
-    margin:3rem;
-    font-size: 3rem;
-    font-weight: 700;
-    color:#e2711d
+.content-title {
+  margin: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e2711d;
 }
 
+.post {
+  min-width: 555px;
+  border: 1px solid #e2711d;
+  border-radius: 5px;
+  margin: 10px;
+}
+.post:nth-child(even) {
+  background-color: #efe7da;
+}
+.post:nth-child(odd) {
+  background-color: #fff;
+}
 
-.post{
-    min-width: 555px ;
-    border: 1px solid #e2711d;
-    border-radius: 5px;
-    margin: 10px;
-    }
-    .post:nth-child(even){
-        background-color: #efe7da;
-        
-    }
-    .post:nth-child(odd){
-        background-color: #fff;
-        
-    }
+   
