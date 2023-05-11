@@ -9,10 +9,14 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="../assets/favicon.ico">
-    <link rel="stylesheet" href="../styles/pages/board.css" />
-    <link rel="stylesheet" href="../styles/pages/registry.css" />
-    <link rel="stylesheet" href="../styles/components/modal-post.css" />
-    <script defer src="../js/views/pages/board.js"></script>
+  
+
+    <link rel="stylesheet" href="../styles/pages/board.css"/>
+    <!-- <link rel="stylesheet" href="../styles/pages/registry.css"/> -->
+
+  
+    <script defer  src="../js/views/components/addPostElement.js"></script>
+    <script defer  src="../js/views/pages/board.js"></script>
    
     <title>Florin County Council - Community Site</title>
 </head>
@@ -58,16 +62,16 @@
     </header>
     <hr />
  
-            <form id="form">
+            <form class="new-post-form" id="form">
                 <fieldset>
-                    <div class="mb-3">
+                    <div class="mb-3 ">
                         <label for="title" class="form-label ">Title:</label>
                         <input type="text" class="form-control w-45" id="title" aria-describedby="content-title"
                             placeholder="Title"
                             name="title">
                     </div>
 
-                    <!-- <fieldset> -->
+                    <fieldset>
                         <div class="mb-3">
                             <label for="DataList" class="form-label">Category:</label>
                             <input  class="form-control" list="datalistOptions" id="DataList"
@@ -81,7 +85,7 @@
                                 <option value="Services"></option>
                             </datalist>
                         </div>
-                    <!-- </fieldset> -->
+                    </fieldset>
                     <div class="mb-3">
                         <fieldset>
                             <label for="title" class="form-label ">Content:</label>
