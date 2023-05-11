@@ -1,6 +1,6 @@
 console.log("hello")
 document.getElementById('username-display').textContent= localStorage.getItem('username')
-
+document.getElementById("log-out").addEventListener("click",logoutUser);
 // MOVE TO - addPostElement.js
 
 // async function createPostElement(data) {

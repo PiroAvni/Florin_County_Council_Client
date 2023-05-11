@@ -49,8 +49,9 @@ To access the community site, please click on the link  [Live Site](https://flor
 To access the server side, please click on the link [Server](https://github.com/yrossan/florin_server)
 
 ## Demo
-
-![Demo]( ["Demo"](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/Florin%20County%20Council%20-%20Community%20Site%20-%20Google%20Chrome%202023-05-11%2021-37-45.mp4))
+|Home Page|Log in & Add post| Delete Post|
+|:-:|:-:|:-:|
+![Demo]( ["Demo"]())
 
 
 ## Images
