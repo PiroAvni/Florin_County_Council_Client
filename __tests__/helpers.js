@@ -4,7 +4,7 @@ const { JSDOM } = jsdom;
 
 const renderDOM = async (filename) => {
 
-  const filePath = path.join(process.cwd(), filename);
+  const filePath = path.join(__dirname, filename);
   // console.log("filepath", filePath)
   const dom = await JSDOM.fromFile(filePath, {
     runScripts: 'dangerously',
