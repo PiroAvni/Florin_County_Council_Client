@@ -40,6 +40,7 @@ document
     const data = await response.json();
     try {
       window.location.assign("login.html");
+      localStorage.setItem("username", form.get("username"));
     } catch (error) {
       console.log(error.message);
     }
