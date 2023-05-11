@@ -25,6 +25,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     console.log(`Setting local token to: ${data}`);
     localStorage.setItem("token", data.token);
     localStorage.setItem("username", form.get("username"))
+    
     window.location.assign("board.html");
   } else {
     alert(data.error);

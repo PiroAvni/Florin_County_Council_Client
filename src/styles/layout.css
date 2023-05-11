@@ -32,7 +32,7 @@ background-color: #fff;
   .col {
     background-color: #f5ac72;
     border-radius: 10px;
-   width:1200px;
+   min-width:1200px;
   }
 
   .post-container{
