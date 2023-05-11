@@ -50,7 +50,7 @@ To access the server side, please click on the link [Server](https://github.com/
 
 ## Demo
 
-![Demo]( ["Demo"](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/C:\Users\avnip\Desktop\Florin_Client\src\assets\Demo.gif))
+![Demo](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/Demo.gif)
 
 
 ## Images
