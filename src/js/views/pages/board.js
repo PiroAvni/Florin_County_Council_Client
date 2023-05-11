@@ -1,5 +1,5 @@
 console.log("hello")
-
+document.getElementById('username-display').textContent= localStorage.getItem('username')
 
 // MOVE TO - addPostElement.js
 

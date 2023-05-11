@@ -69,3 +69,17 @@ font-size: 1rem;
 }
 
 
+.post{
+    min-width: 555px ;
+    border: 1px solid #e2711d;
+    border-radius: 5px;
+    margin: 10px;
+    }
+    .post:nth-child(even){
+        background-color: #efe7da;
+        
+    }
+    .post:nth-child(odd){
+        background-color: #fff;
+        
+    }

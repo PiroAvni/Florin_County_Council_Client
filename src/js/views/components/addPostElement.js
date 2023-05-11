@@ -52,6 +52,9 @@ const deleteBtn = document.createElement("div");
 
   btnContainer.style.cssText = "justify-content: space-between";
   btnContainer.appendChild(deleteBtn);
+console.log(deleteBtn);
+
+
 
   deleteBtn.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -61,17 +64,25 @@ const deleteBtn = document.createElement("div");
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
-      },
+        "Authorization": localStorage.getItem("token")
+      }
     };
     const response = await fetch(
       `https://florin-server-web.onrender.com/posts/${data["id"]}`,
       options
     );
-    const res = await response.json();
-    console.log(`data submit: ${JSON.stringify(res)}`);
+    window.location.reload();
+    console.log("this is the response",response.body)
+    // const res = await response.json();
+    
+    // console.log("this is a string",res)
+    // if (res.status == 201) {
+    //   alert("you post was successfully sent")
+    //   window.location.reload();
+    // }else{
+    //   alert('Unable to Delete post')
+    // }
   });
-
 }
   
 
@@ -156,6 +167,5 @@ async function loadComments(comment_id) {
   console.log(comments);
   return comments;
   //console.log(response);
-  if (response.status == 200) {
-  }
+ 
 }
