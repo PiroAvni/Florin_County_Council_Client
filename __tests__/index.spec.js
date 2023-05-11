@@ -10,7 +10,7 @@ describe('indexcopy.html', () => {
   })
 
   test("Is there a title?", () => {
-    const tit = document.getElementById('title');
+    const tit = document.querySelector('title');
     expect(tit).toBeTruthy()
   })
 
@@ -20,17 +20,17 @@ describe('indexcopy.html', () => {
   })
 
   test("Is there a navbar?", () => {
-    const navbar = document.getElementById('navbar');
+    const navbar = document.querySelector('nav');
     expect(navbar).toBeTruthy()
   })
 
   test("Does the navbar have a logo?", () => {
-    const navbarlogo = document.getElementById('navbarlogo');
+    const navbarlogo = document.querySelector('nav').querySelector("img");
     expect(navbarlogo).toBeTruthy()
   })
 
   test('Login/Register button exists', () => {
-    const btn = document.getElementById('login-register');
+    const btn = document.getElementById('login-logout');
     expect(btn).toBeTruthy()
   })
 
@@ -53,7 +53,7 @@ describe('indexcopy.html', () => {
 
   test("Are there cards for each category", () => {
     const cards = document.querySelectorAll(".card-body").length
-    console.log(cards)
+    // console.log(cards)
     expect(cards).toBe(6)
   })
 
@@ -130,6 +130,71 @@ describe('indexcopy.html', () => {
     const card = document.getElementById('announcements-btn');
     expect(card).toBeTruthy()
   })
+
+  test("Does the announcements card have an identifier?", () => {
+    const parent = document.getElementById("announcements-btn").querySelector("h2")
+    // const h2 = parent.querySelector("h2")
+
+    expect(parent).toBeTruthy()
+  })
+
+  test("Is the announcements card identifier named properly?",()=>{
+    const tit = document.getElementById("announcements-btn").querySelector("h2")
+    expect(tit.innerHTML).toContain("Announcements")
+  })
+
+  test("Does the announcements card have a button?", () => {
+    const parent = document.getElementById("announcements-btn").querySelector("button")
+
+    expect(parent).toBeTruthy()
+  })
+
+  test("Is there a card for events?", ()=>{
+    const card = document.getElementById('events-btn');
+    expect(card).toBeTruthy()
+  })
+
+  test("Does the events card have an identifier?", () => {
+    const parent = document.getElementById("events-btn").querySelector("h2")
+    // const h2 = parent.querySelector("h2")
+
+    expect(parent).toBeTruthy()
+  })
+
+  test("Is the events card identifier named properly?",()=>{
+    const tit = document.getElementById("events-btn").querySelector("h2")
+    expect(tit.innerHTML).toContain("Events")
+  })
+
+  test("Does the events card have a button?", () => {
+    const parent = document.getElementById("events-btn").querySelector("button")
+
+    expect(parent).toBeTruthy()
+  })
+
+  test("Is there a card for clubs?", ()=>{
+    const card = document.getElementById('clubs-btn');
+    expect(card).toBeTruthy()
+  })
+
+  test("Does the clubs card have an identifier?", () => {
+    const parent = document.getElementById("clubs-btn").querySelector("h2")
+    // const h2 = parent.querySelector("h2")
+
+    expect(parent).toBeTruthy()
+  })
+
+  test("Is the clubs card identifier named properly?",()=>{
+    const tit = document.getElementById("clubs-btn").querySelector("h2")
+    expect(tit.innerHTML).toContain("Clubs")
+  })
+
+  test("Does the clubs card have a button?", () => {
+    const parent = document.getElementById("clubs-btn").querySelector("button")
+
+    expect(parent).toBeTruthy()
+  })
+
 
   test("Post list div exists", () => {
     const div = document.getElementById("post-list");
