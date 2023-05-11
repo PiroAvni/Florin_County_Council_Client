@@ -4,19 +4,17 @@
 //   const post = document.createElement("div");
 //   post.className = "post", "mb-1";
 //    post.id = "card"
- 
+
 //   const header = document.createElement("h2");
 //   header.textContent = "Title:";
 //   header.classList.add("m-2","card-title");
 //   header.textContent = data["title"];
 //   post.appendChild(header);
 
-
 //   const category = document.createElement("p");
 //   category.classList.add("m-2","card-subtitle");
 //   category.textContent = data["category"];
 //   post.appendChild(category);
-
 
 //   const content = document.createElement("p");
 //   content.classList.add("m-2", "card-text");
@@ -33,12 +31,9 @@
 //   post.appendChild(date);
 // return post
 
-    
 //   // });
 // }
 
-  
- 
 // async function loadPosts(category) {
 //   await fetch(`https://florin-server-web.onrender.com/posts/${category}`)
 //     .then((res) => res.json())
@@ -56,7 +51,7 @@
 //         window.location.assign("./login.js");
 //       }
 //     })
-  
+
 // }
 async function loadPosts(category) {
   const options = {
@@ -73,86 +68,102 @@ async function loadPosts(category) {
   if (response.status == 200) {
     const posts = await response.json();
     posts.forEach((p) => {
-      createPostElement(p)
+      createPostElement(p);
     });
   } else {
     // window.location.assign("./login.js");
   }
 }
-loadPosts('services');
+loadPosts("services");
 
 // Service Buttons
 
 document.getElementById("jobs-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
-    loadPosts("Jobs")
+  });
+  loadPosts("Jobs");
 });
 
-
-
 document.getElementById("voluntary-btn").addEventListener("click", (e) => {
-    e.preventDefault();
-    const element = document.querySelectorAll(".post")
-    element.forEach(post =>{
-      console.log('1')
-      post.remove();
-    })
-    loadPosts("voluntary");
+  e.preventDefault();
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
+    post.remove();
+  });
+  loadPosts("voluntary");
 });
 
 document.getElementById("events-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
+  });
   loadPosts("events");
 });
 
 document.getElementById("announcements-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
+  });
   loadPosts("announcements");
 });
 
 document.getElementById("announcements-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
+  });
   loadPosts("announcements");
 });
 
 document.getElementById("clubs-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
+  });
   loadPosts("clubs");
 });
 
 document.getElementById("services-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  const element = document.querySelectorAll(".post")
-  element.forEach(post =>{
-    console.log('1')
+  const element = document.querySelectorAll(".post");
+  element.forEach((post) => {
+    console.log("1");
     post.remove();
-  })
+  });
   loadPosts("services");
 });
 
+//login-logout button
+console.log('login-out')
+const loginLogout = document.getElementById("login-logout")
+if (localStorage.getItem("token") !== null) {
+  console.log(localStorage.getItem('token'))
+  loginLogout.textContent= "Logout"
+  loginLogout.addEventListener("click",logoutUser)
+  
 
+} else {
+  loginLogout.textContent= "Login/Register"
+  console.log('else')
+  loginLogout.addEventListener("click", (e) => {
+    // console.log('Reg',localStorage.getItem('token'))
+    // window.location.assign("login.html");
+    window.location.href = "/src/public/login.html";
+  });
+   
+}
