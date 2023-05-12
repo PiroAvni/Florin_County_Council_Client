@@ -24,6 +24,7 @@
 Florin County Council community hub is a space that is; open and accessible to the local community; providing services that the local community wants and needs; where formal decisions about running and managing the hub are taken by people who come mainly from within the local community.
 
 ## Project Description
+
 The aim of this project is to create a community website with the aim of allowing members & businesses in Florin County to:
 
 - Post jobs/volunteering opportunities
@@ -38,7 +39,22 @@ If you would like to see the code for yourself or run the client locally start b
 
 Then with the IDE extension ```live server``` you can run the client side directly from your browser [localHost : http://localhost:3000/](http://localhost:3000/)
 
+
+### Testing - Jest
+
+To test, you will need to [git clone](git@github.com:PiroAvni/Florin_County_Council_Client.git) the project and install package.json using Terminal.
+
+Run in the Terminal:
+
+``` npm install ```
+
+To install the Jest package separately:
+
+```npm install --save-dev jest```
+
+
 ## Usage
+
 
 To run the client you have two options:
  1. run live-server **or**
@@ -47,6 +63,10 @@ To run the client you have two options:
 To access the community site, please click on the link  [Live Site](https://florin-county-council-client.onrender.com/)
 
 To access the server side, please click on the link [Server](https://github.com/yrossan/florin_server)
+
+### Testing - Jest
+
+To run the test, you will need to run  ``` npm run test ``` in the Terminal.
 
 ## Demo
 
@@ -191,7 +211,9 @@ const deleteBtn = document.createElement("div");
 ```
 
 The code to upload post / entries.
-When clicking on each service button it allowed to display an up-to date category for that particular service.
+When clicking on each service button it allowed to display an up-to date category for that particular service button.
+The loadPost function takes in the data,  once it fetches the category based on the params, the code will then iterate through passing the data  in to the createPostElements function to create the elements for each post.
+
 
 ```js
 async function loadPosts(category) {
