@@ -5,20 +5,16 @@
   background-color:#0E4749 ;
 }
 .container{
-display:flex;
-border: 1px sold blue;
-position: relative;
-background-color: #fff;
-}
-
-
+  display:flex;
+  border: 1px sold blue;
+  position: relative;
+  background-color: #fff;
+  }
 .main-container {
   justify-content: center;
   align-items: center;
   margin:auto;
 
- 
- 
 }
 .main-section {
   position: relative;
@@ -34,12 +30,9 @@ background-color: #fff;
     border-radius: 10px;
    min-width:1200px;
   }
-
   .post-container{
     position: relative;
     width:100%;
-
-    
   }
   
 
