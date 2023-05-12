@@ -3,4 +3,5 @@ node_modules/
 .vscode/
 .gitmodules
 indexcopy.html
+registrycopy.html
 coverage/
