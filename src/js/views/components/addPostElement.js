@@ -7,7 +7,7 @@ async function createPostElement(data) {
   post.id = "card";
 
   const header = document.createElement("h2");
-  // header.textContent = "Title:";
+
   header.classList.add("m-2", "card-title");
   header.textContent = data["title"];
   post.appendChild(header);
@@ -74,15 +74,6 @@ console.log(deleteBtn);
     );
     window.location.reload();
     console.log("this is the response",response.body)
-    // const res = await response.json();
-    
-    // console.log("this is a string",res)
-    // if (res.status == 201) {
-    //   alert("you post was successfully sent")
-    //   window.location.reload();
-    // }else{
-    //   alert('Unable to Delete post')
-    // }
   });
 }
   
@@ -91,9 +82,6 @@ console.log(deleteBtn);
   comment.className = "comment";
   comment.style.cssText =
     "display:flex, justify-content: space-between, margin:auto";
-
-    // comment.id = `comment-container-${data["post_id"]}`
-  // console.log(`comment-container-${data["post_id"]}`)
 
   const handleCommentClick = async (e) => {
     e.preventDefault();
@@ -120,7 +108,6 @@ console.log(deleteBtn);
         date.classList.add("date-format", "m-2");
         const dateFormat = new Date(data["post_date"]).toDateString();
         date.textContent = `Post Date: ${dateFormat}`;
-        
 
         commentContainer.appendChild(contentContainer)
         contentContainer.appendChild(newComment);
@@ -132,28 +119,18 @@ console.log(deleteBtn);
         replyBtn.id = "btn-reply";
         replyBtn.textContent = "Reply";
         dateContainer.appendChild(replyBtn);
-
         console.log(`comment-container-${c["post_id"]}`);
 
         newComment.textContent = c["comment"];
         const commentId = `comment-container-${c["post_id"]}`;
         document.getElementById(commentId).appendChild(commentContainer,contentContainer);
-
-        
         btnContainer.style.cssText = "justify-content: space-between";
-        // btnContainer.appendChild(deleteBtn);
-        // const comment = document.createElement("div");
       });
     }
     commentBtn.removeEventListener("click", handleCommentClick);
   };
   commentBtn.addEventListener("click", handleCommentClick);
   //comment call load comments
-
-
-
-  
-
   const elements = [header, category, content, date, , btnContainer, comment];
   elements.forEach((element) => {
     post.appendChild(element);
@@ -167,6 +144,6 @@ async function loadComments(comment_id) {
   const comments = await response.json();
   console.log(comments);
   return comments;
-  //console.log(response);
+  
  
 }

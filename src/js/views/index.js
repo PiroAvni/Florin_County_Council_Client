@@ -1,3 +1,5 @@
+
+
 // function createPostElement(data) {
 //   console.log(data);
 
@@ -83,7 +85,7 @@ document.getElementById("jobs-btn").addEventListener("click", (e) => {
   const element = document.querySelectorAll(".post");
   element.forEach((post) => {
     console.log("1");
-    post.remove();
+    post.remove(); // remove any previous element  
   });
   loadPosts("Jobs");
 });

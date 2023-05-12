@@ -24,8 +24,12 @@
 
 .card.image-full:before,
 .card.image-full > * {
+  height: 220px;
+  width: 220px;
 }
-
+.card-actions{
+  justify-content: center;
+}
 .content-card .card-title {
   font-size: 1.2rem;
 }
