@@ -12,7 +12,8 @@
     "testPathIgnorePatterns": [
       "./__tests__/helpers",
       "./__tests__/index.spec",
-      "./__tests__/registry.spec"
+      "./__tests__/registry.spec",
+      "./__tests__/login.spec"
     ]},
   "keywords": [],
   "author": "",
