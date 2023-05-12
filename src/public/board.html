@@ -9,21 +9,22 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="../assets/favicon.ico">
-  
 
-    <link rel="stylesheet" href="../styles/pages/board.css"/>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/pages/board.css" />
+
     <!-- <link rel="stylesheet" href="../styles/pages/registry.css"/> -->
 
-    <script defer  src="../js/views/components/addPostElement.js"></script>
-    <script defer  src="../js/views/pages/logout.js"></script>
-    <script defer  src="../js/views/pages/board.js"></script>
-   
+    <script defer src="../js/views/components/addPostElement.js"></script>
+    <script defer src="../js/views/pages/logout.js"></script>
+    <script defer src="../js/views/pages/board.js"></script>
     <title>Florin County Council - Community Site</title>
 </head>
 
 <body>
     <!-- Navigation -->
-
     <nav class="nav navbar navbar-expand-lg  shadow p-3  rounded">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -35,84 +36,87 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <button type="button" class="btn-nav">
-                            <a class="nav-link" aria-current="page" id="log-out" >LOG OUT</a>
+                            <a class="nav-link" aria-current="page" id="log-out">LOG OUT</a>
                         </button>
                     </li>
                     <li class="user-message">
                         <h2>Welcome:</h2><span id="username-display">User1</span>
                     </li>
                 </ul>
-
-                
-                    <div class="logo-content">
-                        <a class="navbar-brand" href="../../index.html">
-                            <img src="../assets/logo_fcc.png" alt="logo"></a>
-                    </div>
-                    <p>Florin County Council</p>
-                    
+                <div class="logo-content">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img src="../assets/logo_fcc.png" alt="logo"></a>
+                </div>
+                <p>Florin County Council</p>
             </div>
-
         </div>
         </div>
     </nav>
-
     <header class=" text-center m-3">
         <h1 class=" register-title">Florin County Digital Hub </h1>
         <em class="register-content">Everything local together in one place</em>
     </header>
     <hr />
- 
-            <form class="new-post-form" id="form">
+    <section>
+        <form class="new-post-form" id="form">
+            <fieldset>
+                <div class="mb-3 ">
+                    <label for="title" class="form-label ">Title:</label>
+                    <input type="text" class="form-control w-45" id="title" aria-describedby="content-title"
+                        placeholder="Title" name="title">
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="DataList" class="form-label">Category:</label>
+                    <input class="form-control" list="datalistOptions" id="DataList" placeholder="Select Category"
+                        name="category">
+                    <datalist id="datalistOptions">
+                        <option value="Jobs">
+                        <option value="Voluntary Work">
+                        <option value="Events">
+                        <option value="Announcements">
+                        <option value="Clubs">
+                        <option value="Services"></option>
+                    </datalist>
+                </div>
+            </fieldset>
+            <div class="mb-3">
                 <fieldset>
-                    <div class="mb-3 ">
-                        <label for="title" class="form-label ">Title:</label>
-                        <input type="text" class="form-control w-45" id="title" aria-describedby="content-title"
-                            placeholder="Title"
-                            name="title">
-                    </div>
-
-                    <fieldset>
-                        <div class="mb-3">
-                            <label for="DataList" class="form-label">Category:</label>
-                            <input  class="form-control" list="datalistOptions" id="DataList"
-                                placeholder="Select Category" name="category">
-                            <datalist id="datalistOptions">
-                                <option value="Jobs">
-                                <option value="Voluntary Work">
-                                <option value="Events">
-                                <option value="Announcements">
-                                <option value="Clubs">
-                                <option value="Services"></option>
-                            </datalist>
-                        </div>
-                    </fieldset>
-                    <div class="mb-3">
-                        <fieldset>
-                            <label for="title" class="form-label ">Content:</label>
-                            <textarea id="content" class="form-control" name="content" required></textarea>
-                    </div>
-                </fieldset>
-
-                <button type="submit" id="postBtn" value="post" class="btn btn-primary">Post</button>
-                <!-- <button type="submit" value="update" class="btn btn-primary">Update</button>
-                <button type="submit" value="delete" class="btn btn-primary">Delete</button> -->
-            </form>
-    </section>
-    <!-- <div class="overlay hidden"></div>
-    <button class="btn btn-open">Post</button> -->
-
-    <main>
-
-        <section>
-            <div class="update">
-                <h2 class="update-desc">Latest Community Posts:</h2>
+                    <label for="title" class="form-label ">Content:</label>
+                    <textarea id="content" class="form-control" name="content" required></textarea>
             </div>
-            <div class="container" id="post-list"></div>
-        
-            <hr />
-        
-        </section>
-    </main>
+            </fieldset>
+
+            <button type="submit" id="postBtn" value="post" class="btn btn-primary">Post</button>
+
+        </form>
+    </section>
+
+    <section id="public-enteries">
+        <div class="container">
+            <main class="main-container">
+                <div class="title-container">
+                    <h1>Welcome to Florin County Community</h1>
+                </div>
+                <div class="main-section container text-center">
+                    <div class="flex-row row">
+                        <div id="post-container" class="right-col col">
+                            <p class="service_desc">Latest Community Updates:</p>
+                            <div>
+                                <div id="post-list" class="card card-list"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+
+        </div>
+
+    </section>
+
 
 
 
@@ -148,8 +152,8 @@
                 </svg></a>
         </div>
     </footer>
-   
-   
+
+
 </body>
 
 </html
