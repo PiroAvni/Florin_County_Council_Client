@@ -169,9 +169,9 @@ async function loadPosts() {
 
         const form = new FormData(e.target);
 
-        for (item of form) {
-          console.log(item[0], item[1])
-        }
+        // for (item of form) {
+        //   console.log(item[0], item[1])
+        // }
         console.log(localStorage.getItem("token"))
         const options = {
           method: "POST",
