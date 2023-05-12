@@ -68,6 +68,11 @@ To access the server side, please click on the link [Server](https://github.com/
 
 To run the test, you will need to run  ``` npm run test ``` in the Terminal.
 
+### Bugs- Testing
+
+To get the test to run, a copy of the html file were created with the test files reference those files, the copied HTML files are using the following naming convention:
+  ```indexcopy.html```
+
 ## Demo
 
 ![Demo](https://github.com/PiroAvni/Florin_County_Council_Client/blob/dev/AVNI/src/assets/Demo.gif)
