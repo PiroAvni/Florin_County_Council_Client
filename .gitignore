@@ -2,8 +2,4 @@ node_modules/
 .DS_Store
 .vscode/
 .gitmodules
-indexcopy.html
-registrycopy.html
-logincopy.html
-boardcopy.html
 coverage/
