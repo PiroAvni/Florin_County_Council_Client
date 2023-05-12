@@ -165,7 +165,7 @@ if (localStorage.getItem("token") !== null) {
   loginLogout.addEventListener("click", (e) => {
     // console.log('Reg',localStorage.getItem('token'))
     // window.location.assign("login.html");
-    window.location.href = "/src/public/login.html";
+    window.location.href = "/src/public/registry.html";
   });
    
 }
