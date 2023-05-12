@@ -10,10 +10,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "./__tests__/helpers",
-      "./__tests__/index.spec",
-      "./__tests__/registry.spec",
-      "./__tests__/login.spec"
+      "./__tests__/helpers"
     ]},
   "keywords": [],
   "author": "",
