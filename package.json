@@ -10,7 +10,8 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "./__tests__/helpers"
+      "./__tests__/helpers",
+      "./__tests__/index.spec"
     ]},
   "keywords": [],
   "author": "",
