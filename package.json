@@ -11,7 +11,8 @@
   "jest": {
     "testPathIgnorePatterns": [
       "./__tests__/helpers",
-      "./__tests__/index.spec"
+      "./__tests__/index.spec",
+      "./__tests__/registry.spec"
     ]},
   "keywords": [],
   "author": "",
