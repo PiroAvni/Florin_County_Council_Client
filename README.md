@@ -65,6 +65,7 @@ The technologies used to build the client:
 * [![Boostrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 * [![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/)
 * [![git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+* [![Jest](https://img.shields.io/badge/Jest-6AA84F?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io//)
 
 
 # Process
@@ -288,11 +289,7 @@ document.getElementById("services-btn").addEventListener("click", (e) => {
   loadPosts("services");
 });
 
-
 ```
-
-
-
 * We completed a functional MVP.
 * Challenges were dealt with.
 
@@ -303,8 +300,6 @@ Avni Piro (<https://github.com/PiroAvni>)
 Christopher Sharpe (<https://github.com/CingSharped>)
 
 Muhammad Yaaseen Rossan (<https://github.com/yrossan>)
-
-
 
 # License
 
